@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:share_ride/utilities/colors/app_colors.dart';
+import 'package:share_ride/constants/constant_color.dart';
 import 'package:share_ride/widgets/primary_button.dart';
 import '../../customer_module/customer_module.dart';
 import '../../driver_module/driver_module_put_location.dart';
@@ -15,6 +15,7 @@ class Select_Account extends StatefulWidget {
 class _Select_AccountState extends State<Select_Account> {
   bool status1 = false;
   bool status2 = false;
+
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context);

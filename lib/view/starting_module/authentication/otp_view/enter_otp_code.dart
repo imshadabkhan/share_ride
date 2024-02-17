@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:share_ride/view/starting_module/authentication/widgets/custom_textfield.dart';
 import 'package:share_ride/view/starting_module/choose_account/choose_account.dart';
 import 'package:share_ride/widgets/reuseable_button.dart';
-import 'package:share_ride/utilities/colors/app_colors.dart';
 
 class Enter_Otp_Code extends StatefulWidget {
   @override

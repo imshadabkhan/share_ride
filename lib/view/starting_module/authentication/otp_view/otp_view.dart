@@ -16,7 +16,7 @@ class _Otp_VerificationState extends State<Otp_Verification> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
+        padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -32,13 +32,15 @@ class _Otp_VerificationState extends State<Otp_Verification> {
               ),
               SizedBox(height: 5),
               Text("We will send OTP to your email"),
-
               SizedBox(height: 20),
-            Container(height:50,child: textField(
-              contentPadding: EdgeInsets.all(10),
-              icon: Icon(Icons.email),hintText: "email",)),
+              Container(
+                  height: 50,
+                  child: textField(
+                    contentPadding: EdgeInsets.all(10),
+                    icon: Icon(Icons.email),
+                    hintText: "email",
+                  )),
               SizedBox(height: 30),
-
               InkWell(
                 onTap: () => Navigator.push(
                   context,

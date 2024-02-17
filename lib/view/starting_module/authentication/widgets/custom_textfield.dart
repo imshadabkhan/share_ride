@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 class textField extends StatelessWidget {
   textField({
     super.key,
+    this.controller,
+    this.onTap,
     this.icon,
     this.maxlength,
     this.hintText,
@@ -11,8 +13,13 @@ class textField extends StatelessWidget {
     this.suffixiconcolor,
     this.fillcolor,
     this.keyboardType,
-this.contentPadding
+    this.validator,
+    this.contentPadding,
+
   });
+
+  var validator;
+  var controller;
   var contentPadding;
   var fillcolor;
   var icon;
@@ -21,20 +28,20 @@ this.contentPadding
   var suffixicon;
   var suffixiconcolor;
   var keyboardType;
-
-
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
 
-keyboardType:keyboardType ,
+      validator: validator,
+      controller: controller,
+      onTap: onTap,
+      keyboardType: keyboardType,
       maxLength: maxlength,
-
       style: TextStyle(color: Colors.black),
       decoration: InputDecoration(
-
-counterText: '',
+        counterText: '',
         contentPadding: contentPadding,
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
@@ -54,7 +61,6 @@ counterText: '',
         suffixIconColor: suffixiconcolor,
         hintText: hintText,
         hintStyle: TextStyle(
-
             // fontSize: 12.sp,
             ),
         filled: true,

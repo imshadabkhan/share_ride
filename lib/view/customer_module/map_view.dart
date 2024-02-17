@@ -22,12 +22,19 @@ class _Customer_Map_ViewState extends State<Customer_Map_View> {
       body: Stack(
         alignment: Alignment.topCenter,
         children: [
-          Reuseable_Button(text: "Save Location",),
-          GoogleMap(
+          Positioned(
+              bottom: 40,
+              left: 30,
+              right: 30,
+              child: Reuseable_Button(text: "Save Location",loading: false,)),
+         GoogleMap(
             myLocationEnabled: true,
-zoomControlsEnabled: false,
+            zoomControlsEnabled: false,
             mapType: MapType.normal,
-            initialCameraPosition: CameraPosition(target: LatLng(24.633333, 46.716667), zoom: 12),
+            compassEnabled: true
+
+         ,
+            initialCameraPosition: CameraPosition(target: LatLng(24.633333, 46.716667), zoom: 10),
             onMapCreated: (GoogleMapController controller) {
               _controller = controller;
             },
